@@ -71,10 +71,22 @@ ________________________________________________________________________________
 
 console.log("Задание 3:");
 let number = parseInt(prompt("Введите целое число от -999 до 999: "));
-if (number >= 1 && number <= 5) {
-    
-}
-else {
+let pos_or_not = (number > 0 ) ? "положительное":
+    (number < 0) ? "отрицательное":
+    (number === 0) ? "не положительное и не отрицательное " : "Хьюстон, у нас проблемы!";
+
+
+
+if (number > -1000 && number < 1000) {
+    if (Math.abs(number) <= 999 && Math.abs(number) >= 100) {
+        number = "трехзначное"; 
+    } else if (Math.abs(number) <= 99 && Math.abs(number) >= 10) {
+        number = "двузначное"; 
+    } else if (Math.abs(number) <= 9 && Math.abs(number) >= 0) {
+        number = "одноразрядное";
+    }
+    alert("Вы ввели " + pos_or_not + " " + number + " число")
+} else {
     alert("Вы ввели число, находящееся за пределами работы нашей программы.");
 }
 
