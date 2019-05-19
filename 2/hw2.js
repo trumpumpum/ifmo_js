@@ -101,7 +101,7 @@ let counter = 1;
 let display ;
 while (counter < 101) {
     display = counter;
-    switch (counter % 3 === 0 && counter % 5 === 0) {
+    if (counter % 3 === 0 && counter % 5 === 0) {
         display = "ThreeFive";
     }
     else if (counter % 3 === 0) {
