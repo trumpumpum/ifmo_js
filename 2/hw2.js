@@ -128,6 +128,36 @@ if (year % 400 === 0) {
     alert("Невисокосный год");
 }
 
+// ________________________________________________________________________________________________________
+// Задать количество тарелок и количество моющего средства.
+//     Моющее средство расходуется из расчета 0,5 на одну тарелку.
+//     В цикле выводить сколько моющего средства осталось после мытья каждой тарелки
+//     В конце вывести, сколько тарелок осталось, когда моющее средство закончилось или наоборот
+
+let dishes = parseInt(prompt("Enter quantity of dishes:"));
+let soap = parseFloat(prompt("Enter quantity of dish soap:"));
+let i = soap * 2;
+let soap_const = soap * 2;
+if (dishes > 0 && soap > 0) {
+    while (i >= 0 && dishes >= 0 && soap >= 0) {
+        if (dishes > 0 && soap > 0) {
+            soap = soap - 0.5;
+            dishes = dishes - 1;
+            console.log(soap_const + 1 - i + " итерация. Осталось " + soap + " мыла " + dishes + " тарелок");
+            i--;            
+        } else if (soap === 0) {
+            console.log("Кончилось мыло. Вы не помыли " + dishes + " тарелок");
+            soap--;
+        } else if (dishes === 0) {
+            console.log("Кончились тарелки. У Вас осталось " + soap + " мыла");
+            dishes--;
+        }
+    } console.log("Расчёт окончен, поздравляю!.");        
+} else {
+    console.log("Вы ввели отрицательное число, попробуйте снова с положительными");
+}
+
+
 
 
 
@@ -163,6 +193,6 @@ if          (Math.pow(AB, 2) === Math.pow(BC, 2) + Math.pow(CA, 2)) {
 }   else {
     result = "НЕпрямоугольный";
 }
-console.log(result);
+console.log(result); 
 
 */
