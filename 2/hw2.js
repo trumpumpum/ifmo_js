@@ -105,7 +105,7 @@ while (counter < 101) {
 let year = parseInt(prompt("Введите год"));
 if (year % 400 === 0) {
     alert("Год високосный!");
-} else if (year % 4 === 0 && year % 100 === !0) {
+} else if (year % 4 === 0 && year % 100 !== 0) {
     alert("Год високосный!");
 } else {
     alert("Невисокосный год");
