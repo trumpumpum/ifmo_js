@@ -4,33 +4,17 @@
 let month = parseInt(prompt("Введите номер месяца от 1 до 12:"));
 let m2;
 if (1 <= month && month <= 12) {
-    if (month === 1) {
-        m2 = "январь";
-    } else if (month === 2) {
-            m2 = "февраль";
-    } else if (month === 3) {
-            m2 = "март";
-    } else if (month === 3) {
-            m2 = "апрель";
-    } else if (month === 5) {
-            m2 = "май";
-    } else if (month === 6) {
-            m2 = "июнь";
-    } else if (month === 7) {
-            m2 = "июль";
-    } else if (month === 8) {
-            m2 = "август";
-    } else if (month === 9) {
-            m2 = "сентябрь";
-    } else if (month === 10) {
-            m2 = "октябрь";
-    } else if (month === 11) {
-            m2 = "ноябрь";
-    } else if (month === 12) {
-            m2 = "декабрь";
+    if (month === 1 || month === 2 || month === 12) {
+        m2 = "зима";
+    } else if (month === 3 || month === 4 || month === 5) {
+            m2 = "весна";
+    } else if (month === 6 || month === 7 || month === 8) {
+            m2 = "лето";
+    } else if (month === 9 || month === 10 || month === 11) {
+            m2 = "осень";
     }
-    console.log("Значению " + month + " соответствует месяц " + m2);
-}   else {
+    console.log("Значению " + month + " соответствует сезон " + m2);
+}  else {
 console.log("Вы неправы")
 }
 
@@ -103,8 +87,7 @@ while (counter < 101) {
     display = counter;
     if (counter % 3 === 0 && counter % 5 === 0) {
         display = "ThreeFive";
-    }
-    else if (counter % 3 === 0) {
+    } else if (counter % 3 === 0) {
         display = "Three";
     } else if (counter % 5 === 0) {
         display = "Five";
