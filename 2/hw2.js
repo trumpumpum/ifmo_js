@@ -117,30 +117,31 @@ if (year % 400 === 0) {
 //     В цикле выводить сколько моющего средства осталось после мытья каждой тарелки
 //     В конце вывести, сколько тарелок осталось, когда моющее средство закончилось или наоборот
 
+
+
 let dishes = parseInt(prompt("Enter quantity of dishes:"));
 let soap = parseFloat(prompt("Enter quantity of dish soap:"));
 let i = soap * 2;
 let soap_const = soap * 2;
 if (dishes > 0 && soap > 0) {
-    while (i >= 0 && dishes >= 0 && soap >= 0) {
-        if (dishes > 0 && soap > 0) {
+    while (i >= 0 && dishes >= 0 && soap > 0) {
+        if (dishes > 0 && soap >= 0.5) {
             soap = soap - 0.5;
             dishes = dishes - 1;
-            console.log(soap_const + 1 - i + " итерация. Осталось " + soap + " мыла " + dishes + " тарелок");
-            i--;            
-        } else if (soap === 0) {
-            console.log("Кончилось мыло. Вы не помыли " + dishes + " тарелок");
-            soap--;
+            console.log(soap_const + 1 - i + " итерация. Осталось " + soap + " мыла и " + dishes + " тарелок");
+            i--;          
         } else if (dishes === 0) {
             console.log("Кончились тарелки. У Вас осталось " + soap + " мыла");
             dishes--;
+        } else if (soap < 0.5) {
+            console.log("Кончилось мыло. Вы не помыли " + dishes + " тарелок");
+            soap--; 
         }
-    } console.log("Расчёт окончен, поздравляю!.");        
+    } console.log("Расчёт окончен, поздравляю!."); 
+      
 } else {
     console.log("Вы ввели отрицательное число, попробуйте снова с положительными");
 }
-
-
 
 
 
