@@ -20,20 +20,20 @@ let y3 = parseInt(prompt('Введите координату y 3 точки'));
 let z3 = parseInt(prompt('Введите координату z 3 точки'));
 
 
-let AB = Math.sqrt(Math.pow((x2 - x1), 2) + Math.pow((y2 - y1), 2) + Math.pow((z2 - z1), 2));
-console.log('Длина вектора AB' + AB);  
-let BC = Math.sqrt(Math.pow((x3 - x2), 2) + Math.pow((y3 - y2), 2) + Math.pow((z3 - z2), 2));
-console.log('Длина вектора BC' + BC); 
-let CA = Math.sqrt(Math.pow((x3 - x1), 2) + Math.pow((y3 - y1), 2) + Math.pow((z3 - z1), 2));
-console.log('Длина вектора CA' + CA);  
+let AB = (x2 - x1) + (y2 - y1) + (z2 - z1);
+console.log('Длина вектора AB -- ' + AB);  
+let BC = (x3 - x2) + (y3 - y2) + (z3 - z2);
+console.log('Длина вектора BC -- ' + BC); 
+let CA = (x3 - x1) + (y3 - y1) + (z3 - z1);
+console.log('Длина вектора CA -- ' + CA);  
 
 let result;
 
-if          (Math.pow(AB, 2) === Math.pow(BC, 2) + Math.pow(CA, 2)) {
+if          (AB === BC + CA) {
     result = "прямоугольный";
-}   else if (Math.pow(BC, 2) === Math.pow(AB, 2) + Math.pow(CA, 2)) {
+}   else if (BC === AB + CA) {
     result = "прямоугольный";
-}   else if (Math.pow(CA, 2) === Math.pow(AB, 2) + Math.pow(BC, 2)) {
+}   else if (CA === AB + BC) {
     result = "прямоугольный";
 }   else {
     result = "НЕпрямоугольный";
