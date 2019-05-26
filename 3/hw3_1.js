@@ -64,32 +64,3 @@ console.log(arr);
 // }
 
 
-
-
-var removedItem = fruits.splice(pos, 1)
-arr.splice(arr.indexOf(min), 1); 
-
-
-// arr.splice(arr.indexOf(min), 1);
-console.log(arr.splice(arr.indexOf(index_max), 1));
-console.log(arr.splice(arr.indexOf(index_min), 1));
-
-arr.splice(arr.indexOf(min), 1);
-console.log(arr.splice([index_max, index_min]));
-
-
-console.log(arr);
-console.log(min);
-console.log(max);
-console.log(index_max);
-console.log(index_min);
-
-
-
-
-
-for (let i = 0; i < pics.length; i++) {
-    let img = document.createElement("img"); // будет создан э-т img
-    img.setAttribute("src", "pics/", pics[i]);
-    document.getElementById('pics').appendChild(img);
-}
