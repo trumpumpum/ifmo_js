@@ -20,11 +20,11 @@ let y3 = parseInt(prompt('Введите координату y 3 точки'));
 let z3 = parseInt(prompt('Введите координату z 3 точки'));
 
 
-let AB = (x2 - x1) + (y2 - y1) + (z2 - z1);
+let AB = (x2 - x1) ** 2 + (y2 - y1) ** 2 + (z2 - z1) ** 2;
 console.log('Длина вектора AB -- ' + AB);  
-let BC = (x3 - x2) + (y3 - y2) + (z3 - z2);
+let BC = (x3 - x2) ** 2 + (y3 - y2) ** 2 + (z3 - z2) ** 2;
 console.log('Длина вектора BC -- ' + BC); 
-let CA = (x3 - x1) + (y3 - y1) + (z3 - z1);
+let CA = (x3 - x1) ** 2 + (y3 - y1) ** 2 + (z3 - z1) ** 2;
 console.log('Длина вектора CA -- ' + CA);  
 
 let result;
