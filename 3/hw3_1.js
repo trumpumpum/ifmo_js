@@ -72,7 +72,7 @@ for (i = 1; i <= 999999; i++) {
         arr.push(reminder);
         //console.log(arr);        
     }
-    //Можно захерачить ревёрс в arr
+    //Можно захерачить ревёрс в arr -- себе на будущее
     let sum1 = arr[0] + arr[1] + arr[2];
     let sum2 = arr[3] + arr[4] + arr[5];
     if (sum1 == sum2) {
