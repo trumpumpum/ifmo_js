@@ -15,10 +15,14 @@ console.log(sum);
 console.log('hw4_2');
 let str = prompt('Введите строку');
 let symbol = prompt("Введите символ");
+let regexp = new RegExp(symbol, 'ig');
+let newString = str.replace(regexp, symbol + symbol);
+console.log(`Оригинальная строка: ${str}
+ Символ, по которому будет удвоение: ${symbol}
+ Видоизменённая строка: ${newString}`);
 
-for (let i = 0; i < str.length; i++) {
-  
-}
+ console.log('hw4_3');
+ 
 
 // 3. Проверить что введенный пароль удовлетворяет 
 // следующим условиям сложности:
