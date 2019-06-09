@@ -45,6 +45,7 @@ for (var i = 0; i < arr.length; i++) { //Ищем наиб и наим знач�
         index_min = i;
     }
 }
+//Захерачить условие срвнения индексов и , соотв., удаления 
 var removedmax = arr.splice(index_min, 1);
 var removedmin = arr.splice(index_max, 1);
 console.log(arr);
@@ -58,9 +59,26 @@ console.log(arr);
 теперь раздумывает, как много сувениров потребуется. 
 С помощью программы подсчитайте сколько счастливых билетов в одном рулоне.  */
 
-// let ticketNumber = [000001];
-// for (i = 1; i <= 999999; i++) {
 
-// }
+let count = 0;
+for (i = 1; i <= 999999; i++) {
+    let arr = [];
+
+    let temp = i;
+    for (j = 0; j < 6; j++) {
+        reminder = temp % 10; // 1
+
+        temp = (temp - reminder) / 10;
+        arr.push(reminder);
+        //console.log(arr);        
+    }
+    //Можно захерачить ревёрс в arr
+    let sum1 = arr[0] + arr[1] + arr[2];
+    let sum2 = arr[3] + arr[4] + arr[5];
+    if (sum1 == sum2) {
+        count++;
+    }    
+}
+console.log(count);
 
 
