@@ -45,9 +45,14 @@ for (var i = 0; i < arr.length; i++) { //Ищем наиб и наим знач�
         index_min = i;
     }
 }
-//Захерачить условие срвнения индексов и , соотв., удаления 
-var removedmax = arr.splice(index_min, 1);
-var removedmin = arr.splice(index_max, 1);
+if (index_max > index_min) {
+	var removedmax = arr.splice(index_max, 1);
+	var removedmin = arr.splice(index_min, 1);
+} else {
+	var removedmin = arr.splice(index_min, 1);
+    var removedmax = arr.splice(index_max, 1);
+}
+
 console.log(arr);
 
 /*4*. В городе N проезд в трамвае осуществляется по бумажным отрывным билетам. 
