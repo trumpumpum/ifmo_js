@@ -51,11 +51,20 @@ console.log(Range(1, 111,5));
 // Имя, Фамилия, Возраст, Интересы (в виде массива), Место обучения.
 // Написать отдельную функцию, которой передается объект студент, 
 // а она выводит его содержимое.
-let obj = {
-    
+let student = {
+    id: 1,
+    name: "Карл",
+    surname:"Шнипперсон",
+    age: 23,
+    interesting: ["racing", "girls", "science", "art"],
+    Univercity: "MIT",
 };
 
+function studentInfo (student) {
+    console.log(student);
+}
 
+console.log(studentInfo(student));
 
 
 
